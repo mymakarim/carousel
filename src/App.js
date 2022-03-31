@@ -1,8 +1,9 @@
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
+// import 'slick-carousel/slick/slick.css'
+// import 'slick-carousel/slick/slick-theme.css'
 import './styles.css'
-import ImageCarousel from './ImageCarousel'
+// import ImageCarousel from './ImageCarousel'
 import { useState, useEffect } from 'react'
+import Slider from './components/Slider.js'
 
 export default function App() {
   const [images, setImages] = useState([])
@@ -18,9 +19,12 @@ export default function App() {
 
   console.log('images', images)
 
+  // indide the .App start
+  // <ImageCarousel images={images} />
+  // //end
   return (
     <div className='App'>
-      <ImageCarousel images={images} />
+      <Slider slides={images} />
     </div>
   )
 }
